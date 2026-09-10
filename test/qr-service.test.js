@@ -10,8 +10,8 @@ test('creates PNG and SVG output with selected options', async () => {
     errorCorrectionLevel: 'H'
   });
 
-  assert.match(result.png, /^data:image/png;base64,/);
-  assert.match(result.svg, /<svg[s>]/);
+  assert.match(result.png, /^data:image\/png;base64,/);
+  assert.match(result.svg, /<svg[\s>]/);
   assert.equal(result.options.size, 256);
 });
 
