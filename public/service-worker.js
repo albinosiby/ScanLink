@@ -1,4 +1,4 @@
-const CACHE_NAME = 'scanlink-shell-v1';
+const CACHE_NAME = 'scanlink-shell-v2';
 const APP_SHELL = [
   '/',
   '/index.html',
