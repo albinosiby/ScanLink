@@ -13,6 +13,10 @@
   icons?.createIcons();
   document.querySelector('#year').textContent = new Date().getFullYear();
 
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('/service-worker.js'));
+  }
+
   function getOptions() { return { foreground: controls[0].value, background: controls[1].value, size: controls[2].value, errorCorrectionLevel: controls[3].value }; }
   function showToast(message) { toast.textContent = message; toast.classList.add('visible'); window.clearTimeout(state.timer); state.timer = window.setTimeout(() => toast.classList.remove('visible'), 2300); }
   function setError(message = '') { error.textContent = message; input.setAttribute('aria-invalid', String(Boolean(message))); }
