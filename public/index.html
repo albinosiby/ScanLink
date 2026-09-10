@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="QRly is a fast, free QR Code Generator. Turn any URL into a high-quality, downloadable QR code online." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="QRly — Free QR Code Generator" />
+    <meta property="og:description" content="Turn any link into a clean, downloadable QR code in seconds." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.example/" />
+    <link rel="canonical" href="https://your-domain.example/" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <title>QRly — Free QR Code Generator</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#generator">Skip to QR generator</a>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="QRly home"><span class="brand-mark"><i data-lucide="qr-code"></i></span><span>QRly</span></a>
+        <button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="nav-links"><i data-lucide="menu"></i><span class="sr-only">Toggle menu</span></button>
+        <div class="nav-links" id="nav-links">
+          <a href="#generator">Generator</a><a href="#how-it-works">How it works</a><a href="#faq">FAQ</a><a href="https://github.com/" rel="noreferrer" target="_blank">GitHub <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy"><p class="eyebrow"><span></span>Free QR generator</p><h1 id="hero-title">Turn any link into a<br />QR code.</h1><p>Create a clean, downloadable QR code from any URL in seconds. No signup required.</p></div>
+        <section class="generator-shell" id="generator" aria-label="URL to QR code generator">
+          <div class="generator-main">
+            <div class="generator-heading"><div><h2>Generate your QR code</h2><p>Paste a link and make it instantly scannable.</p></div><span class="status-dot" aria-hidden="true"></span></div>
+            <form id="qr-form" novalidate>
+              <label for="url-input">Website URL</label>
+              <div class="input-row"><div class="input-wrap"><i data-lucide="link-2"></i><input id="url-input" name="url" type="text" inputmode="url" autocomplete="url" placeholder="https://example.com" aria-describedby="url-help url-error" required /></div><button id="generate-button" class="primary-button" type="submit"><span>Generate QR</span><i data-lucide="sparkles"></i></button></div>
+              <p class="input-help" id="url-help">You can enter <strong>example.com</strong> — we’ll add https:// for you.</p><p class="form-error" id="url-error" role="alert" aria-live="polite"></p>
+            </form>
+          </div>
+          <aside class="customizer" aria-labelledby="customizer-title"><h3 id="customizer-title"><i data-lucide="sliders-horizontal"></i> Customize</h3><div class="control-grid"><label>Foreground <input id="foreground" type="color" value="#16213e" aria-label="QR foreground color" /></label><label>Background <input id="background" type="color" value="#ffffff" aria-label="QR background color" /></label><label>Size <select id="size" aria-label="QR size"><option value="256">256 × 256</option><option value="512" selected>512 × 512</option><option value="1024">1024 × 1024</option></select></label><label>Correction <select id="correction" aria-label="Error correction level"><option value="L">L · Low</option><option value="M" selected>M · Medium</option><option value="Q">Q · Quartile</option><option value="H">H · High</option></select></label></div></aside>
+        </section>
+        <section id="result" class="result-panel" aria-live="polite" aria-label="Generated QR code" hidden>
+          <div class="result-copy"><p class="eyebrow"><span></span>Ready to share</p><h2>Your QR code is ready.</h2><p class="destination"><i data-lucide="link-2"></i><span id="destination-url"></span></p><div class="result-actions"><button class="secondary-button" data-download="png" type="button"><i data-lucide="download"></i> Download PNG</button><button class="secondary-button" data-download="svg" type="button"><i data-lucide="file-code-2"></i> Download SVG</button><button class="text-button" id="copy-url" type="button"><i data-lucide="copy"></i><span>Copy URL</span></button></div><button class="reset-button" id="reset-button" type="button"><i data-lucide="rotate-ccw"></i> Generate another</button></div>
+          <div class="qr-stage"><div class="qr-paper"><img id="qr-image" alt="Generated QR code" width="512" height="512" /></div><p>Scan with your phone camera</p></div>
+        </section>
+      </section>
+      <section class="steps-section shell" id="how-it-works" aria-labelledby="steps-title"><div class="section-heading"><p class="eyebrow"><span></span>Simple by design</p><h2 id="steps-title">From link to shareable code.</h2></div><div class="steps-grid"><article><span class="step-icon"><i data-lucide="link"></i></span><h3>1. Paste your link</h3><p>Enter the URL you want to share.</p></article><article><span class="step-icon"><i data-lucide="qr-code"></i></span><h3>2. Generate QR</h3><p>Create the QR code instantly.</p></article><article><span class="step-icon"><i data-lucide="send"></i></span><h3>3. Download &amp; share</h3><p>Download the QR and use it anywhere.</p></article></div></section>
+      <section class="privacy shell"><div class="privacy-icon"><i data-lucide="shield-check"></i></div><div><h2>Your links stay yours.</h2><p>QRly does not permanently store submitted URLs. Your code is created on demand and ready to use.</p></div></section>
+      <section class="faq-section shell" id="faq" aria-labelledby="faq-title"><div class="section-heading"><p class="eyebrow"><span></span>Questions, answered</p><h2 id="faq-title">A few useful details.</h2></div><div class="faq-list"><details><summary>Is the QR code free?<i data-lucide="plus"></i></summary><p>Yes. You can generate and download QR codes here at no cost.</p></details><details><summary>Does the QR code expire?<i data-lucide="plus"></i></summary><p>No. This is a static QR code: its destination is encoded directly into it, so the code itself does not expire.</p></details><details><summary>Do I need an account?<i data-lucide="plus"></i></summary><p>No account, sign-in, or setup is required.</p></details><details><summary>Where does the QR redirect?<i data-lucide="plus"></i></summary><p>It opens the exact website URL you enter. QRly does not place a redirect in between.</p></details><details><summary>Can I use the QR commercially?<i data-lucide="plus"></i></summary><p>Yes. Use your downloaded QR code on packaging, print, presentations, and other commercial materials.</p></details><details><summary>What file formats can I download?<i data-lucide="plus"></i></summary><p>PNG is ideal for everyday use. SVG stays crisp at any scale, making it great for professional print.</p></details></div></section>
+    </main>
+    <footer class="footer"><div class="shell footer-inner"><a class="brand" href="#top"><span class="brand-mark"><i data-lucide="qr-code"></i></span><span>QRly</span></a><div><a href="#faq">Privacy</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></div><p>© <span id="year"></span> QRly</p></div></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>
